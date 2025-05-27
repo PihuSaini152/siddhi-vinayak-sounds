@@ -1,0 +1,130 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: #f9f6f0;
+  padding: 70px 50px;
+  flex-wrap: nowrap;  /* desktop pe no wrap */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  gap: 20px;
+}
+
+.heroLeft {
+  max-width: 50%;
+  animation: slideIn 1s ease forwards;
+}
+
+.animated-heading {
+  font-size: 50px;
+  font-weight: 900;
+  color: #ffd700; /* bright gold */
+  margin-bottom: 24px;
+  text-shadow: 0 0 10px #b8860b;
+}
+
+.hero-description {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #ddd;
+  margin-bottom: 30px;
+  max-width: 90%;
+}
+
+.book-btn {
+  background: linear-gradient(45deg, #b8860b, #ffd700);
+  color: #1a1a1a;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 6px 25px rgba(255, 215, 0, 0.8);
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.book-btn:hover {
+  transform: scale(1.07);
+  background: linear-gradient(45deg, #ffd700, #b8860b);
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 1);
+}
+
+.heroRight {
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroRight img {
+  max-width: 520px;
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(255, 223, 0, 0.4);
+  transition: transform 0.5s ease;
+  filter: drop-shadow(0 0 12px #ffd700);
+}
+
+.heroRight img:hover {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 18px #ffea00);
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .heroLeft,
+  .heroRight {
+    max-width: 100%;
+  }
+
+  .heroRight {
+    order: 2; /* image niche */
+  }
+
+  .heroRight img {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .animated-heading {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .book-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 auto;
+  }
+}

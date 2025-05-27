@@ -1,0 +1,120 @@
+/* ==== Services Page Layout ==== */
+.services-page {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+  min-height: 100vh;
+  color: white;
+}
+
+.services-heading {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ff007f;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff007f;
+}
+
+.services-subtext {
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* ==== Services Grid ==== */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ==== Single Service Card ==== */
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #444;
+  border-radius: 20px;
+  padding: 25px 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(255, 0, 128, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 25px rgba(255, 0, 128, 0.4);
+}
+
+/* ==== Image Styling ==== */
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 128, 0.3));
+}
+
+/* ==== Heading ==== */
+.service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ff66c4;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px rgba(255, 102, 196, 0.6);
+}
+
+/* ==== Paragraph ==== */
+.service-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* ==== Responsive Fixes ==== */
+@media (max-width: 768px) {
+  .services-page {
+    padding: 40px 15px;
+  }
+
+  .services-heading {
+    font-size: 2.4rem;
+  }
+
+  .services-subtext {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .service-card {
+    padding: 20px 15px;
+  }
+
+  .service-card img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-heading {
+    font-size: 2rem;
+  }
+
+  .services-subtext {
+    font-size: 0.9rem;
+  }
+
+  .service-card img {
+    height: 140px;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.88rem;
+  }
+}
