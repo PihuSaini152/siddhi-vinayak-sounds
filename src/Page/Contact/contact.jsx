@@ -1,5 +1,5 @@
 import React from 'react';
-import './contect.css';
+import './contact.css';
 import {
   FaPhoneAlt,
   FaWhatsapp,
