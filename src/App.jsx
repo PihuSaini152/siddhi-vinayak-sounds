@@ -1,12 +1,12 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navebar/nav.jsx';
-import Footer from './Components/Footer/Footer.jsx'; 
+import Footer from './Components/Footer/footer.jsx'; 
 import Home from './Page/Herosection/herosection.jsx'; 
 import Services from './Page/services/service.jsx';
 import About from './Page/About/about.jsx'
 import Gallery from './Page/Eventgallery/eventgallery.jsx';
-import Contact from './Page/Contact/contect.jsx'
+import Contact from './Page/Contact/contact.jsx'
 
 function App() {
   return (
